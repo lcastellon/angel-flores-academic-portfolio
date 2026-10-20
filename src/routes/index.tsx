@@ -205,9 +205,6 @@ function Index() {
               ))}
               <path d="M860 157v-16m0 82v-16m-25-25h-16m82 0h-16" stroke="#e3c59d" strokeWidth="1.3"/>
               <circle cx="860" cy="182" r="4" fill="#e3c59d"/>
-              <text x="30" y="34" fill="#e0cfb3" fontSize="12" letterSpacing="3">RELIEVE / TERRITORIO</text>
-              <text x="30" y="366" fill="#e0cfb3" fontSize="11" letterSpacing="2">CARTOGRAFÍA CONCEPTUAL</text>
-              <text x="1170" y="366" textAnchor="end" fill="#e0cfb3" fontSize="11" letterSpacing="2">01 / ATLAS</text>
             </svg>
           </div>
           <div className="atlas-map-footer flex items-center justify-between gap-4 px-4 py-4 text-[10px] tracking-[.2em] md:px-7">
