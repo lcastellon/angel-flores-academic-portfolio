@@ -143,7 +143,7 @@ function Index() {
       <header className="atlas-navigation sticky top-0 z-30">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-4 md:px-10">
           <a href="#inicio" className="flex items-center gap-3" aria-label={t("Ir al inicio")}>
-            <span className="atlas-wordmark">ÁNGEL D. FLORES DOMÍNGUEZ</span>
+            <span className="atlas-wordmark">DR. ÁNGEL D. FLORES DOMÍNGUEZ</span>
             <img src={logoColtlax} alt={t("El Colegio de Tlaxcala, A.C.")} className="h-8 w-auto rounded-sm bg-[#f3f0e7] p-1" />
           </a>
           <div className="flex items-center gap-4">
