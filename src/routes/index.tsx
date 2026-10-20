@@ -366,9 +366,14 @@ function Index() {
             <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
               © 2026 Ángel David Flores Domínguez
             </span>
-            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-              Tlaxcala
-            </span>
+            <a
+              href="https://laiads.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground transition-colors hover:text-terra"
+            >
+              {t("Desarrollado por LAIA")}
+            </a>
           </div>
         </div>
       </footer>
