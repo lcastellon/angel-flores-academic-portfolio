@@ -1,6 +1,8 @@
 export type Language = "es" | "en";
 
 const english: Record<string, string> = {
+  "Turismo, paisaje y territorio.": "Tourism, landscape and territory.",
+  "Proyectos de planificación turística sustentable en Tlaxcala y la región centro de México.": "Sustainable tourism planning projects in Tlaxcala and central Mexico.",
   "Ir al inicio": "Go to homepage",
   "El Colegio de Tlaxcala, A.C.": "El Colegio de Tlaxcala, A.C.",
   "Navegación principal": "Main navigation",
