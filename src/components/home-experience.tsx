@@ -1,14 +1,12 @@
 import { translate, type Language } from "@/lib/translations";
 import { useEffect, useState, type FormEvent } from "react";
 import { ArrowLeft, ArrowRight, ExternalLink, Send } from "lucide-react";
-import { useServerFn } from "@tanstack/react-start";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
-import { sendContactMessage } from "@/lib/contact.functions";
 
 type Publication = {
   title: string;
@@ -157,38 +155,13 @@ export function PublicationBanner({
 
 export function ContactForm({ language }: { language: Language }) {
   const t = (text: string) => translate(language, text);
-  const sendMessage = useServerFn(sendContactMessage);
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "unavailable" | "error">(
     "idle",
   );
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const form = event.currentTarget;
-    const values = new FormData(form);
-    setStatus("sending");
-
-    try {
-      const result = await sendMessage({
-        data: {
-          name: String(values.get("name") ?? ""),
-          email: String(values.get("email") ?? ""),
-          subject: String(values.get("subject") ?? ""),
-          message: String(values.get("message") ?? ""),
-          website: String(values.get("website") ?? ""),
-        },
-      });
-
-      if (!result.sent) {
-        setStatus("unavailable");
-        return;
-      }
-
-      form.reset();
-      setStatus("sent");
-    } catch {
-      setStatus("error");
-    }
+    setStatus("unavailable");
   };
 
   return (

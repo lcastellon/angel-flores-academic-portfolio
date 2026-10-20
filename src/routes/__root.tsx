@@ -93,16 +93,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Dra. María de Lourdes Hernández Rodríguez" },
+      { title: "Dr. Ángel David Flores Domínguez" },
       {
         name: "description",
-        content: "Investigación en desarrollo regional, agua y territorio en Tlaxcala.",
+        content: "Investigación en geografía del turismo, paisaje y territorio en Tlaxcala.",
       },
-      { name: "author", content: "María de Lourdes Hernández Rodríguez" },
-      { property: "og:title", content: "Dra. María de Lourdes Hernández Rodríguez" },
+      { name: "author", content: "Ángel David Flores Domínguez" },
+      { property: "og:title", content: "Dr. Ángel David Flores Domínguez" },
       {
         property: "og:description",
-        content: "Investigación en desarrollo regional, agua y territorio en Tlaxcala.",
+        content: "Investigación en geografía del turismo, paisaje y territorio en Tlaxcala.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
