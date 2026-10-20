@@ -1,6 +1,21 @@
 export type Language = "es" | "en";
 
 const english: Record<string, string> = {
+  "Ir al inicio": "Go to homepage",
+  "El Colegio de Tlaxcala, A.C.": "El Colegio de Tlaxcala, A.C.",
+  "Navegación principal": "Main navigation",
+  "Navegación móvil": "Mobile navigation",
+  "Menú": "Menu",
+  "ATLAS TERRITORIAL — INVESTIGACIÓN Y PAISAJE": "TERRITORIAL ATLAS — RESEARCH AND LANDSCAPE",
+  "Comprender el territorio.": "Understanding territories.",
+  "Interpretar sus paisajes.": "Interpreting their landscapes.",
+  "Profesor-Investigador en El Colegio de Tlaxcala, A.C. Geografía del turismo, paisaje y procesos territoriales.": "Professor and Researcher at El Colegio de Tlaxcala, A.C. Geography of tourism, landscapes, and territorial processes.",
+  "Explorar investigación": "Explore research",
+  "Cartografía topográfica conceptual": "Conceptual topographic cartography",
+  "Ilustración abstracta de curvas de nivel y retícula cartográfica, sin coordenadas geográficas reales.": "Abstract illustration of contour lines and a map grid, without real geographic coordinates.",
+  "TERRITORIO · PAISAJE · TURISMO": "TERRITORY · LANDSCAPE · TOURISM",
+  "EXPLORAR": "EXPLORE",
+
   "Página no encontrada": "Page not found",
   "La página que buscas no existe o ha cambiado de ubicación.":
     "The page you're looking for doesn't exist or has been moved.",
