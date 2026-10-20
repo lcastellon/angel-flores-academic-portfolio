@@ -309,7 +309,7 @@ function Index() {
               © 2026 Ángel David Flores Domínguez
             </span>
             <a
-              href="https://laiads.com"
+              href="https://laiasd.com"
               target="_blank"
               rel="noopener noreferrer"
               className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground transition-colors hover:text-terra"
