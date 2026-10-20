@@ -177,3 +177,24 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Atlas Territorial — independent visual system */
+.atlas-navigation{background:#203b33;color:#f3f0e7;border-bottom:1px solid #ffffff26}
+.atlas-wordmark{font-family:Manrope,Inter,sans-serif;font-weight:700;font-size:.75rem;letter-spacing:.075em}
+.atlas-navigation-link{color:#e4eadf;transition:color .2s ease}
+.atlas-navigation-link:hover{color:#d8b38e}
+.atlas-hero{background:#203b33;color:#f3f0e7}
+.atlas-eyebrow{color:#d8b38e;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.7rem;letter-spacing:.17em}
+.atlas-headline{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(2.7rem,6.5vw,6.7rem);line-height:1.04;font-weight:400;letter-spacing:-.03em;text-wrap:balance;color:#f6f2e8}
+.atlas-headline em{font-weight:400;color:#c5d3c3}
+.atlas-button-primary,.atlas-button-secondary{display:inline-flex;align-items:center;justify-content:center;gap:.75rem;padding:.85rem 1.25rem;border-radius:999px;text-decoration:none;font-family:Manrope,Inter,sans-serif;font-weight:600;font-size:.82rem;transition:transform .2s ease,background .2s ease}
+.atlas-button-primary{color:#203b33;background:#f3f0e7}
+.atlas-button-primary:hover{background:#e2c69f;transform:translateY(-2px)}
+.atlas-button-secondary{color:#f3f0e7;border:1px solid #95aa9a}
+.atlas-button-secondary:hover{background:#ffffff16;transform:translateY(-2px)}
+.atlas-map{background:#1b362d}
+.atlas-map-footer{background:#162d27;color:#dec9a9}
+.atlas-contour{stroke-dasharray:1800;stroke-dashoffset:1800;animation:atlas-draw 1.9s cubic-bezier(.22,.61,.36,1) forwards}
+@keyframes atlas-draw{to{stroke-dashoffset:0}}
+@media(max-width:640px){.atlas-wordmark{font-size:.62rem}.atlas-eyebrow{font-size:.58rem;letter-spacing:.09em}.atlas-headline{font-size:clamp(2.3rem,9.2vw,3.6rem)}.atlas-map svg{min-height:220px;object-fit:cover}}
+@media(prefers-reduced-motion:reduce){.atlas-contour{animation:none;stroke-dashoffset:0}.atlas-button-primary:hover,.atlas-button-secondary:hover{transform:none}}
