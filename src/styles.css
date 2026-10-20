@@ -253,3 +253,10 @@
 .atlas-timeline-row{background:#e9e8dd;box-shadow:0 0 0 12px #e9e8dd}
 .atlas-projects::after{display:none}
 @media(max-width:760px){.atlas-chapter::before{background-size:900px auto;opacity:.14}.atlas-section-head{box-shadow:0 0 0 10px #f3f0e7}.atlas-chapter-muted .atlas-section-head{box-shadow:0 0 0 10px #e9e8dd}}
+
+/* Continue the topographic texture into the contact/footer chapter. */
+footer#contacto{position:relative;isolation:isolate;overflow:hidden;background:#f3f0e7}
+footer#contacto::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:url("/atlas-topografia.svg") center top/1200px auto repeat;opacity:.21}
+footer#contacto>div{position:relative;z-index:1}
+footer#contacto .grid>div:first-child,footer#contacto .grid>div:last-child{background:#f3f0e7;box-shadow:0 0 0 14px #f3f0e7}
+@media(max-width:760px){footer#contacto::before{background-size:900px auto;opacity:.14}footer#contacto .grid>div:first-child,footer#contacto .grid>div:last-child{box-shadow:0 0 0 8px #f3f0e7}}
