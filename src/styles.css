@@ -198,3 +198,9 @@
 @keyframes atlas-draw{to{stroke-dashoffset:0}}
 @media(max-width:640px){.atlas-wordmark{font-size:.62rem}.atlas-eyebrow{font-size:.58rem;letter-spacing:.09em}.atlas-headline{font-size:clamp(2.3rem,9.2vw,3.6rem)}.atlas-map svg{min-height:220px;object-fit:cover}}
 @media(prefers-reduced-motion:reduce){.atlas-contour{animation:none;stroke-dashoffset:0}.atlas-button-primary:hover,.atlas-button-secondary:hover{transform:none}}
+
+/* Light chapters continue the forest-green atlas cover */
+#lineas,#trayectoria,#publicaciones,#contacto{scroll-margin-top:6rem;position:relative}
+#lineas h2,#trayectoria h2,#publicaciones h2,#contacto h2{font-family:"DM Serif Display",Georgia,serif;font-weight:400;letter-spacing:-.025em}
+#lineas .prism,#trayectoria .prism,#publicaciones .prism,#contacto .prism{background:#faf8f1;border:1px solid #ccd3c5;box-shadow:none;backdrop-filter:none}
+#lineas .prism:hover,#trayectoria .prism:hover{border-color:#819987}
