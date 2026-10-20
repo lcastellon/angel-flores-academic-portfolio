@@ -140,6 +140,7 @@ const english: Record<string, string> = {
   "Maestría en Gestión de Turismo Regional Sustentable": "Master's in Sustainable Regional Tourism Management",
   "Artículo · 2023": "Article · 2023",
   "Artículo · 2012": "Article · 2012",
+  "Desarrollado por LAIA": "Developed by LAIA",
 };
 
 export function translate(language: Language, text: string): string {
