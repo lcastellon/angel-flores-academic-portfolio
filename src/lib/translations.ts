@@ -1,6 +1,15 @@
 export type Language = "es" | "en";
 
 const english: Record<string, string> = {
+  "INVESTIGACIÓN": "RESEARCH",
+  "Tres perspectivas para comprender el territorio y sus transformaciones.": "Three perspectives to understand territories and their transformations.",
+  "CAMPO DE ESTUDIO": "RESEARCH FIELD",
+  "PERFIL ACADÉMICO": "ACADEMIC PROFILE",
+  "Formación, investigación y docencia.": "Education, research and teaching.",
+  "PROYECTOS Y TERRITORIOS": "PROJECTS AND TERRITORIES",
+  "BIBLIOTECA ACADÉMICA": "ACADEMIC LIBRARY",
+  "Producción científica y obras para consulta.": "Research publications and scholarly works.",
+
   "Turismo, paisaje y territorio.": "Tourism, landscape and territory.",
   "Proyectos de planificación turística sustentable en Tlaxcala y la región centro de México.": "Sustainable tourism planning projects in Tlaxcala and central Mexico.",
   "Ir al inicio": "Go to homepage",
