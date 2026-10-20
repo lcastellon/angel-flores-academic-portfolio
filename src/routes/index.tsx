@@ -310,11 +310,11 @@ function Index() {
                 {t("CONTACTO")}
               </p>
               <h2 className="font-display text-4xl font-semibold tracking-tight text-balance">
-                {t("Conversemos sobre turismo, paisaje y territorio.")}
+                {t("Turismo, paisaje y territorio.")}
               </h2>
               <p className="mt-4 max-w-[40ch] text-sm leading-relaxed text-pretty text-muted-foreground">
                 {t(
-                  "Disponible para colaboraciones, dirección de tesis y proyectos de planificación turística sustentable en Tlaxcala y la región centro de México.",
+                  "Proyectos de planificación turística sustentable en Tlaxcala y la región centro de México.",
                 )}
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-4">
