@@ -2,7 +2,7 @@ import { LanguageSelector } from "@/components/language-selector";
 import { translate, type Language } from "@/lib/translations";
 import { createFileRoute } from "@tanstack/react-router";
 import logoColtlax from "@/assets/logo-coltlax.png";
-import { ContactForm, PublicationBanner } from "@/components/home-experience";
+import { ContactForm } from "@/components/home-experience";
 
 export const Route = createFileRoute("/")({
   validateSearch: (search: Record<string, unknown>): { lang: Language } => ({
@@ -214,92 +214,41 @@ function Index() {
         </div>
       </section>
 
-      <section id="lineas" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16">
-        <div className="mb-10 flex items-baseline justify-between border-b border-line pb-4">
-          <h2 className="font-display text-3xl font-semibold tracking-tight">
-            {t("Líneas de investigación")}
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {researchLines.map((line) => (
-            <div
-              key={line.number}
-              className="prism animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both] rounded-2xl p-6 transition-colors hover:bg-card/60"
-              style={{ animationDelay: line.delay }}
-            >
-              <span className={`font-mono text-[10px] uppercase tracking-[0.2em] ${line.color}`}>
-                {line.number}
-              </span>
-              <h3 className="mt-3 font-display text-xl font-semibold tracking-tight">
-                {t(line.title)}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-pretty text-muted-foreground">
-                {t(line.body)}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="trayectoria" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16">
-        <div className="mb-10 flex items-baseline justify-between border-b border-line pb-4">
-          <h2 className="font-display text-3xl font-semibold tracking-tight">{t("Trayectoria")}</h2>
-        </div>
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
-          <dl className="space-y-6 md:col-span-7">
-            {trajectory.map((item) => (
-              <div key={item.label} className="grid grid-cols-1 gap-1">
-                <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-cobalt">
-                  {t(item.label)}
-                </dt>
-                <dd className="text-base leading-relaxed text-pretty">{t(item.text)}</dd>
-              </div>
+      <section id="lineas" className="atlas-chapter scroll-mt-20">
+        <div className="atlas-chapter-inner">
+          <div className="atlas-section-head"><span className="atlas-section-index">01 / {t("INVESTIGACIÓN")}</span><h2>{t("Líneas de investigación")}</h2><p>{t("Tres perspectivas para comprender el territorio y sus transformaciones.")}</p></div>
+          <div className="atlas-research-list">
+            {researchLines.map((line, i) => (
+              <article key={line.number} className="atlas-research-row">
+                <div className="atlas-research-num">{line.number}</div>
+                <div className="atlas-research-content"><span className="atlas-small-label">{t("CAMPO DE ESTUDIO")} / 0{i+1}</span><h3>{t(line.title)}</h3><p>{t(line.body)}</p></div>
+                <span className="atlas-research-mark" aria-hidden="true">↗</span>
+              </article>
             ))}
-          </dl>
-          <div className="prism rounded-2xl p-6 md:col-span-5">
-            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-terra">
-              {t("Proyectos de investigación")}
-            </p>
-            <ul className="mt-5 divide-y divide-line">
-              {projects.map((project) => (
-                <li key={project.title} className="py-4 first:pt-0 last:pb-0">
-                  <span className="font-mono text-xs text-muted-foreground">{t(project.year)}</span>
-                  <p className="mt-1 font-display text-base leading-snug tracking-tight text-pretty">
-                    {t(project.title)}
-                  </p>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
 
-      <section id="publicaciones" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16">
-        <div className="mb-8 flex items-baseline justify-between border-b border-line pb-4">
-          <h2 className="font-display text-3xl font-semibold tracking-tight">
-            {t("Publicaciones destacadas")}
-          </h2>
+      <section id="trayectoria" className="atlas-chapter atlas-chapter-muted scroll-mt-20">
+        <div className="atlas-chapter-inner">
+          <div className="atlas-section-head"><span className="atlas-section-index">02 / {t("PERFIL ACADÉMICO")}</span><h2>{t("Trayectoria")}</h2><p>{t("Formación, investigación y docencia.")}</p></div>
+          <div className="atlas-profile-grid">
+            <dl className="atlas-timeline">{trajectory.map((item, index) => (<div className="atlas-timeline-row" key={item.label}><span className="atlas-timeline-dot" aria-hidden="true"/><dt><span className="atlas-small-label">{String(index+1).padStart(2,"0")} / {t(item.label)}</span></dt><dd>{t(item.text)}</dd></div>))}</dl>
+            <aside className="atlas-projects">
+              <div className="atlas-projects-head"><span className="atlas-small-label">03 / {t("PROYECTOS Y TERRITORIOS")}</span><h3>{t("Proyectos de investigación")}</h3></div>
+              {projects.map((project,index)=>(<article key={project.title} className="atlas-project"><span className="atlas-project-index">{String(index+1).padStart(2,"0")}</span><div><span className="atlas-small-label">{t(project.year)}</span><h4>{t(project.title)}</h4></div></article>))}
+            </aside>
+          </div>
         </div>
-        <PublicationBanner publications={publications} language={lang} />
-        <ul className="divide-y divide-line">
-          {publications.map((pub) => (
-            <li key={pub.title} className="grid grid-cols-1 gap-2 py-5 md:grid-cols-12 md:gap-6">
-              <div className="md:col-span-9">
-                <a
-                  href={pub.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-base leading-relaxed text-pretty underline decoration-line underline-offset-4 transition-colors hover:decoration-terra"
-                >
-                  {pub.title}
-                </a>
-              </div>
-              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground md:col-span-3 md:text-right">
-                {t(pub.type)}
-              </span>
-            </li>
-          ))}
-        </ul>
+      </section>
+
+      <section id="publicaciones" className="atlas-chapter scroll-mt-20">
+        <div className="atlas-chapter-inner">
+          <div className="atlas-section-head"><span className="atlas-section-index">04 / {t("BIBLIOTECA ACADÉMICA")}</span><h2>{t("Publicaciones destacadas")}</h2><p>{t("Producción científica y obras para consulta.")}</p></div>
+          <div className="atlas-publications">
+            {publications.map((pub,index)=>(<article className="atlas-publication" key={pub.title}><span className="atlas-publication-index">{String(index+1).padStart(2,"0")}</span><div><span className="atlas-small-label">{t(pub.type)}</span><h3>{pub.title}</h3></div><a href={pub.url} target="_blank" rel="noopener noreferrer" className="atlas-publication-action" aria-label={t("Consultar publicación")+" "+(index+1)}><span aria-hidden="true">↗</span></a></article>))}
+          </div>
+        </div>
       </section>
 
       <footer id="contacto" className="mt-8 border-t border-line">
