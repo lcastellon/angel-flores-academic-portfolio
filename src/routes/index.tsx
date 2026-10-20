@@ -140,83 +140,79 @@ function Index() {
   const t = (text: string) => translate(lang, text);
   return (
     <div className="min-h-screen bg-paper font-body text-ink antialiased selection:bg-terra/20">
-      <header className="sticky top-0 z-30 border-b border-line bg-paper/70 backdrop-blur-md">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-3">
-            <span className="font-display text-lg font-semibold tracking-tight">
-              Ángel David Flores Domínguez
-            </span>
-            <img
-              src={logoColtlax}
-              alt="El Colegio de Tlaxcala, A.C."
-              className="hidden h-8 w-auto sm:block"
-            />
-          </div>
+      <header className="atlas-navigation sticky top-0 z-30">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-4 md:px-10">
+          <a href="#inicio" className="flex items-center gap-3" aria-label={t("Ir al inicio")}>
+            <span className="atlas-wordmark">ÁNGEL D. FLORES DOMÍNGUEZ</span>
+            <img src={logoColtlax} alt={t("El Colegio de Tlaxcala, A.C.")} className="h-8 w-auto rounded-sm bg-[#f3f0e7] p-1" />
+          </a>
           <div className="flex items-center gap-4">
-            <nav className="hidden items-center gap-6 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground sm:flex">
+            <nav aria-label={t("Navegación principal")} className="hidden items-center gap-5 text-[11px] font-medium tracking-wide lg:flex">
               {navLinks.map((link) => (
-                <a key={link.href} href={link.href} className="transition-colors hover:text-ink">
-                  {t(link.label)}
-                </a>
+                <a key={link.href} href={link.href} className="atlas-navigation-link">{t(link.label)}</a>
               ))}
             </nav>
             <LanguageSelector language={lang} />
+            <details className="atlas-mobile-nav relative lg:hidden">
+              <summary className="cursor-pointer rounded-lg border border-white/30 px-3 py-2 text-xs">{t("Menú")} ☰</summary>
+              <nav aria-label={t("Navegación móvil")} className="absolute right-0 top-full z-40 mt-2 flex min-w-48 flex-col gap-1 rounded-lg border border-white/20 bg-[#203b33] p-3 shadow-xl">
+                {navLinks.map((link) => <a key={link.href} href={link.href} className="rounded px-3 py-2 text-sm text-[#f3f0e7] hover:bg-white/10">{t(link.label)}</a>)}
+              </nav>
+            </details>
           </div>
         </div>
       </header>
 
-      <section className="mx-auto max-w-6xl px-6 pt-16 pb-12">
-        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-12">
-          <div className="max-w-3xl md:col-span-8">
-            <div className="animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both]">
-              <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.25em] text-terra">
-                {t("Investigador · Geografía del Turismo · SNII I")}
-              </p>
-              <h1 className="font-display text-[clamp(2.4rem,6vw,4.8rem)] leading-[0.95] font-semibold tracking-tight text-balance">
-                Ángel David <span className="italic text-terra">Flores</span> Domínguez
-              </h1>
-              <p className="mt-6 max-w-[42ch] font-display text-xl text-pretty italic text-terra">
-                {t(
-                  '"El turismo transforma los paisajes: entenderlo desde el territorio es la clave para hacerlo sustentable"',
-                )}
-              </p>
-              <p className="mt-6 max-w-[52ch] text-sm leading-relaxed text-pretty text-muted-foreground">
-                {t(
-                  "Profesor-Investigador en El Colegio de Tlaxcala, A.C. Analizo los procesos territoriales que transforman los paisajes, donde el turismo y otras actividades de apropiación del espacio son factores de cambio que pueden comprometer la sustentabilidad.",
-                )}
-              </p>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <a
-                  href="#lineas"
-                  className="rounded-full bg-ink px-5 py-3 text-sm font-medium text-paper transition-colors hover:bg-terra"
-                >
-                  {t("Ver líneas de investigación")}
-                </a>
-                <a
-                  href="#contacto"
-                  className="rounded-full border border-line px-5 py-3 text-sm font-medium transition-colors hover:border-ink"
-                >
-                  {t("Contactar")}
-                </a>
-              </div>
+      <section id="inicio" className="atlas-hero relative overflow-hidden px-6 pb-0 pt-14 md:px-10 md:pt-20">
+        <div className="pointer-events-none absolute inset-0 opacity-[0.07]" aria-hidden="true" style={{ backgroundImage: "linear-gradient(#d0d9c9 1px, transparent 1px), linear-gradient(90deg, #d0d9c9 1px, transparent 1px)", backgroundSize: "64px 64px" }} />
+        <div className="relative mx-auto max-w-7xl">
+          <div className="atlas-eyebrow mb-6 flex items-center gap-3"><span className="h-px w-9 bg-[#d8b38e]" />{t("ATLAS TERRITORIAL — INVESTIGACIÓN Y PAISAJE")}</div>
+          <h1 className="atlas-headline max-w-5xl">
+            <span className="block">{t("Comprender el territorio.")}</span>
+            <em className="block">{t("Interpretar sus paisajes.")}</em>
+          </h1>
+          <div className="mt-7 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <p className="text-base font-semibold text-[#f6f2e8]">Dr. Ángel David Flores Domínguez</p>
+              <p className="mt-2 max-w-xl text-sm leading-relaxed text-[#cad9ce]">{t("Profesor-Investigador en El Colegio de Tlaxcala, A.C. Geografía del turismo, paisaje y procesos territoriales.")}</p>
+              <p className="mt-2 text-xs tracking-wide text-[#d8b38e]">{t("Investigador · Geografía del Turismo · SNII I")}</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <a href="#lineas" className="atlas-button-primary">{t("Explorar investigación")} <span aria-hidden="true">↗</span></a>
+              <a href="#publicaciones" className="atlas-button-secondary">{t("Publicaciones")} <span aria-hidden="true">↗</span></a>
             </div>
           </div>
-          <div className="md:col-span-4">
-            <div
-              className="animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both]"
-              style={{ animationDelay: "120ms" }}
-            >
-              <div
-                className="prism mx-auto flex aspect-square w-full max-w-xs items-center justify-center rounded-full border border-line shadow-sm"
-                aria-label={t("Dr. Ángel David Flores Domínguez")}
-                role="img"
-              >
-                <span className="font-display text-7xl font-semibold italic text-terra">ÁF</span>
-              </div>
-              <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                El Colegio de Tlaxcala, A.C. · CETMAS
-              </p>
-            </div>
+          <div className="atlas-map mt-12 overflow-hidden rounded-t-xl border border-[#b9c6b6]/25 md:mt-16">
+            <svg viewBox="0 0 1200 390" role="img" aria-labelledby="atlas-map-title atlas-map-desc" className="block h-auto w-full" preserveAspectRatio="xMidYMid slice">
+              <title id="atlas-map-title">{t("Cartografía topográfica conceptual")}</title>
+              <desc id="atlas-map-desc">{t("Ilustración abstracta de curvas de nivel y retícula cartográfica, sin coordenadas geográficas reales.")}</desc>
+              <defs>
+                <linearGradient id="atlas-terrain-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#365b4b"/><stop offset="100%" stopColor="#142d27"/></linearGradient>
+                <pattern id="atlas-terrain-grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0V60" stroke="#cad6c6" strokeOpacity=".14" strokeWidth=".7" fill="none"/></pattern>
+              </defs>
+              <rect width="1200" height="390" fill="url(#atlas-terrain-gradient)"/>
+              <rect width="1200" height="390" fill="url(#atlas-terrain-grid)"/>
+              {Array.from({ length: 18 }, (_, i) => (
+                <path key={i}
+                  d={`M ${-150+i*19} ${390+i*12} C ${-50+i*18} ${180+i*6},${90+i*22} ${150-i*7},${230+i*16} ${250-i*9} S ${450+i*13} ${380-i*15},${640+i*14} ${220-i*10} S ${970+i*12} ${55-i*8},${1350+i*5} ${70+i*14}`}
+                  fill="none" stroke={i % 4 === 0 ? "#d8b38e" : "#afc9b6"}
+                  strokeOpacity={i % 4 === 0 ? ".72" : ".38"}
+                  strokeWidth={i % 4 === 0 ? "1.8" : "1.1"}
+                  className="atlas-contour" style={{ animationDelay: `${i*65}ms` }} />
+              ))}
+              {Array.from({ length: 8 }, (_, i) => (
+                <ellipse key={i} cx="860" cy="182" rx={58+i*32} ry={22+i*17} transform="rotate(-24 860 182)" fill="none" stroke="#a9c8b1" strokeOpacity={0.5-i*.045} strokeWidth="1"/>
+              ))}
+              <path d="M860 157v-16m0 82v-16m-25-25h-16m82 0h-16" stroke="#e3c59d" strokeWidth="1.3"/>
+              <circle cx="860" cy="182" r="4" fill="#e3c59d"/>
+              <text x="30" y="34" fill="#e0cfb3" fontSize="12" letterSpacing="3">RELIEVE / TERRITORIO</text>
+              <text x="30" y="366" fill="#e0cfb3" fontSize="11" letterSpacing="2">CARTOGRAFÍA CONCEPTUAL</text>
+              <text x="1170" y="366" textAnchor="end" fill="#e0cfb3" fontSize="11" letterSpacing="2">01 / ATLAS</text>
+            </svg>
+          </div>
+          <div className="atlas-map-footer flex items-center justify-between gap-4 px-4 py-4 text-[10px] tracking-[.2em] md:px-7">
+            <span>{t("TERRITORIO · PAISAJE · TURISMO")}</span>
+            <a href="#lineas" className="inline-flex items-center gap-2 hover:underline">{t("EXPLORAR")} ↓</a>
           </div>
         </div>
       </section>
