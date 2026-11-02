@@ -19,7 +19,6 @@ export default defineConfig({
         // Pin entities to the hoisted v4.5.0 copy; a nested v7 breaks email rendering in SSR.
         "entities/lib/decode.js": path.resolve(__dirname, "node_modules/entities/lib/decode.js"),
         "entities/lib/encode.js": path.resolve(__dirname, "node_modules/entities/lib/encode.js"),
-        entities: path.resolve(__dirname, "node_modules/entities"),
       },
     },
   },
