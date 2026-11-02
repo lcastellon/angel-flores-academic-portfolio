@@ -122,7 +122,7 @@ const publications = [
     title:
       "Flores-Domínguez, A. D. y Priego-Santander, A. D. (2024). Problemas ambientales de los paisajes en la microcuenca Atoyac-Xochiac, subcuenca Alto Atoyac. Una aproximación desde la geoecología. En Fascículo 5 Ríos y Aguas Superficiales, colección Las crisis del agua del siglo XXI: perspectivas y soluciones. El Colegio de Tlaxcala, A.C. Pp. 47-61.",
     type: "Capítulo · 2024",
-    url: "https://revistacoltlax.mx/omp/index.php/repositoriocoltlax/catalog/view/108/115/689",
+    url: "https://revistacoltlax.mx/omp/index.php/repositoriocoltlax/catalog/view/108/124/724",
   },
   {
     title:
