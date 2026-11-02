@@ -116,6 +116,7 @@ const publications = [
       "Charchabal, Y. S., Priego Santander, A. G., & Flores-Domínguez, A. D. (2025). Evaluación de la heterogeneidad geoecológica del municipio San Mateo Río Hondo, Oaxaca, México, a escala 1:50 000. Revista Geográfica de América Central, 2(75), 151-181.",
     type: "Artículo · 2025",
     url: "https://doi.org/10.15359/rgac.75-2.6",
+    image: "/publications/charchabal-geoecologia.webp",
   },
   {
     title:
