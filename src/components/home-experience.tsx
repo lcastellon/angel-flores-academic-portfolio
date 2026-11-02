@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
+import { useServerFn } from "@tanstack/react-start";
+import { sendContactMessage } from "@/lib/contact.functions";
 
 type Publication = {
   title: string;
@@ -155,13 +157,35 @@ export function PublicationBanner({
 
 export function ContactForm({ language }: { language: Language }) {
   const t = (text: string) => translate(language, text);
+  const send = useServerFn(sendContactMessage);
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "unavailable" | "error">(
     "idle",
   );
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setStatus("unavailable");
+    const form = event.currentTarget;
+    const fd = new FormData(form);
+    setStatus("sending");
+    try {
+      const result = await send({
+        data: {
+          name: String(fd.get("name") ?? ""),
+          email: String(fd.get("email") ?? ""),
+          subject: String(fd.get("subject") ?? ""),
+          message: String(fd.get("message") ?? ""),
+          website: String(fd.get("website") ?? ""),
+        },
+      });
+      if (result.ok) {
+        form.reset();
+        setStatus("sent");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
