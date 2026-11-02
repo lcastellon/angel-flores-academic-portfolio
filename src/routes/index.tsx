@@ -152,10 +152,14 @@ function Index() {
     <div className="min-h-screen bg-paper font-body text-ink antialiased selection:bg-terra/20">
       <header className="atlas-navigation sticky top-0 z-30">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-4 md:px-10">
-          <a href="#inicio" className="flex items-center gap-3" aria-label={t("Ir al inicio")}>
-            <span className="atlas-wordmark">DR. ÁNGEL D. FLORES DOMÍNGUEZ</span>
-            <img src={logoColtlax} alt={t("El Colegio de Tlaxcala, A.C.")} className="h-8 w-auto rounded-sm bg-[#f3f0e7] p-1" />
-          </a>
+          <div className="flex items-center gap-3">
+            <a href="#inicio" className="flex items-center gap-3" aria-label={t("Ir al inicio")}>
+              <span className="atlas-wordmark">DR. ÁNGEL D. FLORES DOMÍNGUEZ</span>
+            </a>
+            <a href="https://coltlax.edu.mx/" target="_blank" rel="noopener noreferrer" aria-label={t("El Colegio de Tlaxcala, A.C.")}>
+              <img src={logoColtlax} alt={t("El Colegio de Tlaxcala, A.C.")} className="h-8 w-auto rounded-sm bg-[#f3f0e7] p-1" />
+            </a>
+          </div>
           <div className="flex items-center gap-4">
             <nav aria-label={t("Navegación principal")} className="hidden items-center gap-5 text-[11px] font-medium tracking-wide lg:flex">
               {navLinks.map((link) => (
@@ -305,7 +309,9 @@ function Index() {
             <div className="md:col-span-7">
               <ContactForm language={lang} />
               <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
-                <img src={logoColtlax} alt="El Colegio de Tlaxcala, A.C." className="h-10 w-auto" />
+                <a href="https://coltlax.edu.mx/" target="_blank" rel="noopener noreferrer">
+                  <img src={logoColtlax} alt="El Colegio de Tlaxcala, A.C." className="h-10 w-auto" />
+                </a>
               </div>
               <p className="mt-4 font-display text-2xl italic text-terra">
                 El Colegio de Tlaxcala, A.C.
