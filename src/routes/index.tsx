@@ -75,7 +75,7 @@ const trajectory = [
   },
   {
     label: "Adscripción",
-    text: "Profesor-Investigador en El Colegio de Tlaxcala, A.C. desde 2016, adscrito al Centro de Estudios en Turismo, Medio Ambiente y Sustentabilidad.",
+    text: "Profesor-Investigador «A» de Tiempo Completo en El Colegio de Tlaxcala, A.C. desde 2016, adscrito al Centro de Estudios en Turismo, Medio Ambiente y Sustentabilidad, del cual fue Director (2022–2024). Desde 2025, titular de la Secretaría de Investigación.",
   },
   {
     label: "Reconocimiento",
@@ -83,7 +83,7 @@ const trajectory = [
   },
   {
     label: "Docencia",
-    text: "Núcleo Académico Básico de la Maestría en Gestión de Turismo Regional Sustentable y de la Maestría en Desarrollo Regional. Dirección de tesis en planificación turística, paisaje y geografía del turismo.",
+    text: "Núcleo Académico Básico de la Maestría en Gestión de Turismo Regional Sustentable y del Doctorado en Desarrollo Regional. Dirección de tesis en planificación turística, paisaje, sustentabilidad y geografía del turismo.",
   },
 ];
 
@@ -103,33 +103,39 @@ const projects = [
 const publications = [
   {
     title:
-      "Santiago Charchabal, Y., Priego Santander, Á. G., & Flores Domínguez, Á. D. (2025). Evaluación de la heterogeneidad geoecológica del municipio San Mateo Río Hondo, Oaxaca, México, a escala 1:50 000. Revista Geográfica de América Central.",
+      "da Silva Lazzaroto, B. M. y Flores-Domínguez, A. D. (2025). Perspectivas de resiliencia comunitaria en Latinoamérica. Entramados, 12(18): 125-132.",
     type: "Artículo · 2025",
-    url: "https://kimuk.conare.ac.cr/Author/Home?author=Flores+Dom%C3%ADnguez%2C+%C3%81ngel+David",
+    url: "https://fh.mdp.edu.ar/revistas/index.php/entramados/article/view/9279",
   },
   {
     title:
-      "Hernández-Rodríguez, M. de L., Ocampo-Fletes, I., & Flores-Domínguez, Á. D. (Coords. generales). (2024). Las crisis del agua del siglo XXI: perspectivas y soluciones. El Colegio de Tlaxcala, A.C.",
+      "Charchabal, Y. S., Priego Santander, A. G., & Flores-Domínguez, A. D. (2025). Evaluación de la heterogeneidad geoecológica del municipio San Mateo Río Hondo, Oaxaca, México, a escala 1:50 000. Revista Geográfica de América Central, 2(75), 151-181.",
+    type: "Artículo · 2025",
+    url: "https://doi.org/10.15359/rgac.75-2.6",
+  },
+  {
+    title:
+      "Flores-Domínguez, A. D. y Priego-Santander, A. D. (2024). Problemas ambientales de los paisajes en la microcuenca Atoyac-Xochiac, subcuenca Alto Atoyac. Una aproximación desde la geoecología. En Fascículo 5 Ríos y Aguas Superficiales, colección Las crisis del agua del siglo XXI: perspectivas y soluciones. El Colegio de Tlaxcala, A.C. Pp. 47-61.",
+    type: "Capítulo · 2024",
+    url: "https://revistacoltlax.mx/omp/index.php/repositoriocoltlax/catalog/view/108/115/689",
+  },
+  {
+    title:
+      "Hernández-Rodríguez, M. L., Ocampo-Fletes, I. y Flores-Domínguez, A. D. (Coords.). (2024). Las crisis del agua del siglo XXI: perspectivas y soluciones – Colección de seis fascículos. El Colegio de Tlaxcala, A.C.",
     type: "Libro · 2024",
     url: "https://revistacoltlax.mx/omp/index.php/repositoriocoltlax/catalog/book/108",
   },
   {
     title:
-      "Valoración económica ambiental: la tendencia de la investigación en México y Latinoamérica (2023). Tropical and Subtropical Agroecosystems.",
+      "Harland Faux, D. P., & Flores Domínguez, A. D. (2023). Desarrollo, jóvenes campesinos indígenas y turismo alternativo. Reflexiones para su integración. Revista de Turismo e Identidad, 4(1), 71–104.",
     type: "Artículo · 2023",
-    url: "https://snii.org/ciencias-sociales/flores-dominguez-angel-david/",
+    url: "https://revistas.uncu.edu.ar/ojs3/index.php/turismoeindentidad/article/view/6925",
   },
   {
     title:
-      "Turismo y geografía: relaciones y aplicaciones, un análisis desde la formación del profesional en el turismo (2022). Editorial UPTC.",
-    type: "Libro · 2022",
-    url: "https://librosaccesoabierto.uptc.edu.co/index.php/editorial-uptc/catalog/book/188",
-  },
-  {
-    title:
-      "Flores Domínguez, Á. D. (2012). Zonificación funcional ecoturística de la zona costera de Michoacán, México, a escala 1:250 000. Revista Geográfica de América Central.",
-    type: "Artículo · 2012",
-    url: "https://kimuk.conare.ac.cr/Author/Home?author=Flores+Dom%C3%ADnguez%2C+%C3%81ngel+David",
+      "Flores-Domínguez, A. D., Ríos-Elorza, S. y López-Guevara, V. M. (Coords.). (2023). Integración de redes horizontales para el turismo alternativo en la montaña Matlalcueyetl y su área de influencia. El Colegio de Tlaxcala, A.C.",
+    type: "Libro · 2023",
+    url: "https://revistacoltlax.mx/omp/index.php/repositoriocoltlax/catalog/book/55",
   },
 ];
 
@@ -172,6 +178,8 @@ function Index() {
             <em className="block">{t("Interpretar sus paisajes.")}</em>
           </h1>
           <div className="mt-7 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div className="flex items-end gap-5">
+              <img src={portrait.url} alt="Dr. Ángel David Flores Domínguez" width={624} height={855} className="h-36 w-28 shrink-0 rounded-lg border border-[#d8b38e]/50 object-cover object-top shadow-xl md:h-44 md:w-32" />
             <div>
               <p className="text-base font-semibold text-[#f6f2e8]">Dr. Ángel David Flores Domínguez</p>
               <p className="mt-2 max-w-xl text-sm leading-relaxed text-[#cad9ce]">{t("Profesor-Investigador en El Colegio de Tlaxcala, A.C. Geografía del turismo, paisaje y procesos territoriales.")}</p>
