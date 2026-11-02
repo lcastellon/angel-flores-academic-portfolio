@@ -1,5 +1,6 @@
 import { LanguageSelector } from "@/components/language-selector";
 import { translate, type Language } from "@/lib/translations";
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import logoColtlax from "@/assets/logo-coltlax.png";
 import portrait from "@/assets/angel-david-flores.jpg.asset.json";
@@ -146,6 +147,7 @@ const researchGateUrl = "https://www.researchgate.net/profile/Angel-Flores-Domin
 function Index() {
   const { lang } = Route.useSearch();
   const t = (text: string) => translate(lang, text);
+  const [mapRun, setMapRun] = useState(0);
   return (
     <div className="min-h-screen bg-paper font-body text-ink antialiased selection:bg-terra/20">
       <header className="atlas-navigation sticky top-0 z-30">
@@ -193,9 +195,11 @@ function Index() {
               <a href="#publicaciones" className="atlas-button-secondary">{t("Publicaciones")} <span aria-hidden="true">↗</span></a>
             </div>
           </div>
-          <div className="atlas-map mt-12 overflow-hidden rounded-t-xl border border-[#b9c6b6]/25 md:mt-16">
-            <svg viewBox="0 0 1200 390" role="img" aria-labelledby="atlas-map-title atlas-map-desc" className="block h-auto w-full" preserveAspectRatio="xMidYMid slice">
-              <title id="atlas-map-title">{t("Cartografía topográfica conceptual")}</title>
+          <div
+            className="atlas-map mt-12 overflow-hidden rounded-t-xl border border-[#b9c6b6]/25 md:mt-16"
+            onMouseEnter={() => setMapRun((run) => run + 1)}
+          >
+            <svg viewBox="0 0 1200 390" role="img" aria-labelledby="atlas-map-desc" className="block h-auto w-full" preserveAspectRatio="xMidYMid slice">
               <desc id="atlas-map-desc">{t("Ilustración abstracta de curvas de nivel y retícula cartográfica, sin coordenadas geográficas reales.")}</desc>
               <defs>
                 <linearGradient id="atlas-terrain-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#365b4b"/><stop offset="100%" stopColor="#142d27"/></linearGradient>
@@ -203,14 +207,16 @@ function Index() {
               </defs>
               <rect width="1200" height="390" fill="url(#atlas-terrain-gradient)"/>
               <rect width="1200" height="390" fill="url(#atlas-terrain-grid)"/>
-              {Array.from({ length: 18 }, (_, i) => (
-                <path key={i}
-                  d={`M ${-150+i*19} ${390+i*12} C ${-50+i*18} ${180+i*6},${90+i*22} ${150-i*7},${230+i*16} ${250-i*9} S ${450+i*13} ${380-i*15},${640+i*14} ${220-i*10} S ${970+i*12} ${55-i*8},${1350+i*5} ${70+i*14}`}
-                  fill="none" stroke={i % 4 === 0 ? "#d8b38e" : "#afc9b6"}
-                  strokeOpacity={i % 4 === 0 ? ".72" : ".38"}
-                  strokeWidth={i % 4 === 0 ? "1.8" : "1.1"}
-                  className="atlas-contour" style={{ animationDelay: `${i*65}ms` }} />
-              ))}
+              <g key={mapRun}>
+                {Array.from({ length: 18 }, (_, i) => (
+                  <path key={i}
+                    d={`M ${-150+i*19} ${390+i*12} C ${-50+i*18} ${180+i*6},${90+i*22} ${150-i*7},${230+i*16} ${250-i*9} S ${450+i*13} ${380-i*15},${640+i*14} ${220-i*10} S ${970+i*12} ${55-i*8},${1350+i*5} ${70+i*14}`}
+                    fill="none" stroke={i % 4 === 0 ? "#d8b38e" : "#afc9b6"}
+                    strokeOpacity={i % 4 === 0 ? ".72" : ".38"}
+                    strokeWidth={i % 4 === 0 ? "1.8" : "1.1"}
+                    className="atlas-contour" style={{ animationDelay: `${i*65}ms` }} />
+                ))}
+              </g>
               {Array.from({ length: 8 }, (_, i) => (
                 <ellipse key={i} cx="860" cy="182" rx={58+i*32} ry={22+i*17} transform="rotate(-24 860 182)" fill="none" stroke="#a9c8b1" strokeOpacity={0.5-i*.045} strokeWidth="1"/>
               ))}
