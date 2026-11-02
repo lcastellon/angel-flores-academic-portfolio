@@ -6,7 +6,7 @@ import { TEMPLATES } from './registry'
 // Server-only: reads LOVABLE_API_KEY. Never import from client components.
 
 // Configuration baked in at scaffold time
-const SITE_NAME = "Drangelflores"
+const SITE_NAME = "Sitio web Dr. Ángel David Flores"
 // SENDER_DOMAIN is the verified sender FQDN: a delegated subdomain (e.g., "notify.example.com"),
 // or the root itself when the domain is registered through Lovable. It MUST match the sender verified in Lovable's email setup.
 const SENDER_DOMAIN = "notify.angeldavidflores.com"
