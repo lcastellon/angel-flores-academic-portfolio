@@ -260,3 +260,9 @@ footer#contacto::before{content:"";position:absolute;inset:0;z-index:0;pointer-e
 footer#contacto>div{position:relative;z-index:1}
 footer#contacto .grid>div:first-child,footer#contacto .grid>div:last-child{background:#f3f0e7;box-shadow:0 0 0 14px #f3f0e7}
 @media(max-width:760px){footer#contacto::before{background-size:900px auto;opacity:.14}footer#contacto .grid>div:first-child,footer#contacto .grid>div:last-child{box-shadow:0 0 0 8px #f3f0e7}}
+
+/* Publication cover thumbnails are preserved in their original portrait aspect ratio. */
+.atlas-publication-details{display:flex;align-items:flex-start;gap:1.3rem;min-width:0}
+.atlas-publication-details>div{min-width:0;flex:1}
+.atlas-publication-cover{display:block;flex:0 0 90px;width:90px;height:auto;aspect-ratio:288/482;object-fit:contain;border:1px solid #d1d9cc;background:#fff;box-shadow:0 4px 12px rgba(32,59,51,.08)}
+@media(max-width:640px){.atlas-publication-details{gap:.8rem}.atlas-publication-cover{flex-basis:66px;width:66px}}
