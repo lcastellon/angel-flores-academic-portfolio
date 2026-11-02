@@ -194,8 +194,7 @@ function Index() {
             </div>
           </div>
           <div className="atlas-map mt-12 overflow-hidden rounded-t-xl border border-[#b9c6b6]/25 md:mt-16">
-            <svg viewBox="0 0 1200 390" role="img" aria-labelledby="atlas-map-title atlas-map-desc" className="block h-auto w-full" preserveAspectRatio="xMidYMid slice">
-              <title id="atlas-map-title">{t("Cartografía topográfica conceptual")}</title>
+            <svg viewBox="0 0 1200 390" role="img" aria-labelledby="atlas-map-desc" className="block h-auto w-full" preserveAspectRatio="xMidYMid slice">
               <desc id="atlas-map-desc">{t("Ilustración abstracta de curvas de nivel y retícula cartográfica, sin coordenadas geográficas reales.")}</desc>
               <defs>
                 <linearGradient id="atlas-terrain-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#365b4b"/><stop offset="100%" stopColor="#142d27"/></linearGradient>

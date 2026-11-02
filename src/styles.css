@@ -196,6 +196,8 @@
 .atlas-map-footer{background:#162d27;color:#dec9a9}
 .atlas-contour{stroke-dasharray:1800;stroke-dashoffset:1800;animation:atlas-draw 1.9s cubic-bezier(.22,.61,.36,1) forwards}
 @keyframes atlas-draw{to{stroke-dashoffset:0}}
+@keyframes atlas-draw-hover{to{stroke-dashoffset:0}}
+.atlas-map svg:hover .atlas-contour{animation-name:atlas-draw-hover}
 @media(max-width:640px){.atlas-wordmark{font-size:.62rem}.atlas-eyebrow{font-size:.58rem;letter-spacing:.09em}.atlas-headline{font-size:clamp(2.3rem,9.2vw,3.6rem)}.atlas-map svg{min-height:220px;object-fit:cover}}
 @media(prefers-reduced-motion:reduce){.atlas-contour{animation:none;stroke-dashoffset:0}.atlas-button-primary:hover,.atlas-button-secondary:hover{transform:none}}
 
