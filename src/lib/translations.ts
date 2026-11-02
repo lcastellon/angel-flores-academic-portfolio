@@ -162,7 +162,7 @@ const english: Record<string, string> = {
   "Profesor-Investigador en El Colegio de Tlaxcala, A.C. Analizo los procesos territoriales que transforman los paisajes, donde el turismo y otras actividades de apropiación del espacio son factores de cambio que pueden comprometer la sustentabilidad.": "Research professor at El Colegio de Tlaxcala, A.C. I study the territorial processes that transform landscapes, where tourism and other ways of appropriating space are drivers of change that may compromise sustainability.",
   "Conversemos sobre turismo, paisaje y territorio.": "Let's talk about tourism, landscape and territory.",
   "Disponible para colaboraciones, dirección de tesis y proyectos de planificación turística sustentable en Tlaxcala y la región centro de México.": "Available for collaborations, thesis supervision and sustainable tourism planning projects in Tlaxcala and central Mexico.",
-  "CV institucional": "Institutional CV",
+  "CV Rizoma": "Rizoma CV",
   "Profesor-Investigador · Turismo, Medio Ambiente y Sustentabilidad": "Research professor · Tourism, Environment and Sustainability",
   "Maestría en Gestión de Turismo Regional Sustentable": "Master's in Sustainable Regional Tourism Management",
   "Artículo · 2023": "Article · 2023",
