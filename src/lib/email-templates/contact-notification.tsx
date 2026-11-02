@@ -32,7 +32,7 @@ const ContactNotification = ({ name, email, subject, message }: Props) => (
 
 export const template = {
   component: ContactNotification,
-  subject: (data: Record<string, any>) => `Contacto web: ${data.subject ?? 'Nuevo mensaje'}`,
+  subject: (data: Record<string, any>) => `Contacto web: ${data['subject'] ?? 'Nuevo mensaje'}`,
   displayName: 'Aviso de formulario de contacto',
   to: 'angeldavid@coltlax.edu.mx',
   previewData: {
