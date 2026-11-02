@@ -2,6 +2,7 @@ import { LanguageSelector } from "@/components/language-selector";
 import { translate, type Language } from "@/lib/translations";
 import { createFileRoute } from "@tanstack/react-router";
 import logoColtlax from "@/assets/logo-coltlax.png";
+import portrait from "@/assets/angel-david-flores.jpg.asset.json";
 import { ContactForm } from "@/components/home-experience";
 
 export const Route = createFileRoute("/")({
@@ -184,6 +185,7 @@ function Index() {
               <p className="text-base font-semibold text-[#f6f2e8]">Dr. Ángel David Flores Domínguez</p>
               <p className="mt-2 max-w-xl text-sm leading-relaxed text-[#cad9ce]">{t("Profesor-Investigador en El Colegio de Tlaxcala, A.C. Geografía del turismo, paisaje y procesos territoriales.")}</p>
               <p className="mt-2 text-xs tracking-wide text-[#d8b38e]">{t("Investigador · Geografía del Turismo · SNII I")}</p>
+            </div>
             </div>
             <div className="flex flex-wrap gap-3">
               <a href="#lineas" className="atlas-button-primary">{t("Explorar investigación")} <span aria-hidden="true">↗</span></a>
