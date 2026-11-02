@@ -3,6 +3,7 @@ import { translate, type Language } from "@/lib/translations";
 import { createFileRoute } from "@tanstack/react-router";
 import logoColtlax from "@/assets/logo-coltlax.png";
 import portrait from "@/assets/angel-david-flores.jpg.asset.json";
+import cvRizoma from "@/assets/cv-rizoma.pdf.asset.json";
 import { ContactForm } from "@/components/home-experience";
 
 export const Route = createFileRoute("/")({
@@ -286,12 +287,12 @@ function Index() {
                   ResearchGate
                 </a>
                 <a
-                  href="https://elcoltlax.edu.mx/pdf/CV_ADFD.pdf"
+                  href={cvRizoma.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full border border-line px-5 py-3 text-sm font-medium transition-colors hover:border-terra hover:text-terra"
                 >
-                  {t("CV institucional")}
+                  {t("CV Rizoma")}
                 </a>
               </div>
             </div>
