@@ -137,6 +137,7 @@ const publications = [
       "Harland Faux, D. P., & Flores Domínguez, A. D. (2023). Desarrollo, jóvenes campesinos indígenas y turismo alternativo. Reflexiones para su integración. Revista de Turismo e Identidad, 4(1), 71–104.",
     type: "Artículo · 2023",
     url: "https://revistas.uncu.edu.ar/ojs3/index.php/turismoeindentidad/article/view/6925",
+    image: "/publications/rti-vol4-num1-2023.webp",
   },
   {
     title:
