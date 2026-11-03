@@ -144,6 +144,7 @@ const publications = [
       "Flores-Domínguez, A. D., Ríos-Elorza, S. y López-Guevara, V. M. (Coords.). (2023). Integración de redes horizontales para el turismo alternativo en la montaña Matlalcueyetl y su área de influencia. El Colegio de Tlaxcala, A.C.",
     type: "Libro · 2023",
     url: "https://revistacoltlax.mx/omp/index.php/repositoriocoltlax/catalog/book/55",
+    image: "/publications/redes-horizontales-matlalcueyetl.webp",
   },
 ];
 
