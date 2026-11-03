@@ -266,3 +266,10 @@ footer#contacto .grid>div:first-child,footer#contacto .grid>div:last-child{backg
 .atlas-publication-details>div{min-width:0;flex:1}
 .atlas-publication-cover{display:block;flex:0 0 90px;width:90px;height:auto;aspect-ratio:288/482;object-fit:contain;border:1px solid #d1d9cc;background:#fff;box-shadow:0 4px 12px rgba(32,59,51,.08)}
 @media(max-width:640px){.atlas-publication-details{gap:.8rem}.atlas-publication-cover{flex-basis:66px;width:66px}}
+
+/* Publication cover images are direct, accessible links to their articles/books. */
+.atlas-publication-cover-link{display:block;flex:0 0 90px;width:90px;border-radius:2px;transition:transform .2s ease,box-shadow .2s ease}
+.atlas-publication-cover-link:hover{transform:translateY(-2px);box-shadow:0 7px 14px rgba(32,59,51,.15)}
+.atlas-publication-cover-link:focus-visible{outline:3px solid #ad7654;outline-offset:3px}
+@media(max-width:640px){.atlas-publication-cover-link{flex-basis:66px;width:66px}}
+@media(prefers-reduced-motion:reduce){.atlas-publication-cover-link{transition:none}}
