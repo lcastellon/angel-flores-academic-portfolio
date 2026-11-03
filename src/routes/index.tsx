@@ -123,13 +123,14 @@ const publications = [
       "Flores-Domínguez, A. D. y Priego-Santander, A. D. (2024). Problemas ambientales de los paisajes en la microcuenca Atoyac-Xochiac, subcuenca Alto Atoyac. Una aproximación desde la geoecología. En Fascículo 5 Ríos y Aguas Superficiales, colección Las crisis del agua del siglo XXI: perspectivas y soluciones. El Colegio de Tlaxcala, A.C. Pp. 47-61.",
     type: "Capítulo · 2024",
     url: "https://revistacoltlax.mx/omp/index.php/repositoriocoltlax/catalog/view/108/124/724",
-    image: "https://revistacoltlax.mx/omp/public/presses/1/submission_108_137_coverImage_es_ES_t.jpg",
+    image: "/publications/fasciculo-5-rios-aguas.webp",
   },
   {
     title:
       "Hernández-Rodríguez, M. L., Ocampo-Fletes, I. y Flores-Domínguez, A. D. (Coords.). (2024). Las crisis del agua del siglo XXI: perspectivas y soluciones – Colección de seis fascículos. El Colegio de Tlaxcala, A.C.",
     type: "Libro · 2024",
     url: "https://revistacoltlax.mx/omp/index.php/repositoriocoltlax/catalog/book/108",
+    image: "https://revistacoltlax.mx/omp/public/presses/1/submission_108_137_coverImage_es_ES_t.jpg",
   },
   {
     title:
@@ -266,7 +267,7 @@ function Index() {
         <div className="atlas-chapter-inner">
           <div className="atlas-section-head"><span className="atlas-section-index">04 / {t("BIBLIOTECA ACADÉMICA")}</span><h2>{t("Publicaciones destacadas")}</h2><p>{t("Producción científica y obras para consulta.")}</p></div>
           <div className="atlas-publications">
-            {publications.map((pub,index)=>(<article className="atlas-publication" key={pub.title}><span className="atlas-publication-index">{String(index+1).padStart(2,"0")}</span><div className="atlas-publication-details">{("image" in pub && pub.image) ? <img src={pub.image} alt="Portada de la revista Entramados" loading="lazy" decoding="async" className="atlas-publication-cover" /> : null}<div><span className="atlas-small-label">{t(pub.type)}</span><h3>{pub.title}</h3></div></div><a href={pub.url} target="_blank" rel="noopener noreferrer" className="atlas-publication-action" aria-label={t("Consultar publicación")+" "+(index+1)}><span aria-hidden="true">↗</span></a></article>))}
+            {publications.map((pub,index)=>(<article className="atlas-publication" key={pub.title}><span className="atlas-publication-index">{String(index+1).padStart(2,"0")}</span><div className="atlas-publication-details">{("image" in pub && pub.image) ? <img src={pub.image} alt={`Portada de ${pub.title}`} loading="lazy" decoding="async" className="atlas-publication-cover" /> : null}<div><span className="atlas-small-label">{t(pub.type)}</span><h3>{pub.title}</h3></div></div><a href={pub.url} target="_blank" rel="noopener noreferrer" className="atlas-publication-action" aria-label={t("Consultar publicación")+" "+(index+1)}><span aria-hidden="true">↗</span></a></article>))}
           </div>
         </div>
       </section>
